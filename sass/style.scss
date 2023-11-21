@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+$primary: #029735;
+$mulish: "Mulish", sans-serif;
+$inter: "Inter", sans-serif;
+@mixin button{
+  border-radius: 6px;
+  padding: 16px 79px;
+  cursor: pointer;
+}
+@mixin mobileButton{
+width: 140px;
+height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  /* font-family: 'Inter', sans-serif;
+font-family: 'Mulish', sans-serif; */
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding:0 6%; 
+  align-items: center;
+  height: 59px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background: #FFF;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.11);
+  @media screen and (min-width:1000px) {
+    background: linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(90deg, #08BD46 0.84%, rgba(44, 255, 204, 0.00) 194.85%);
+    height:84px;
+  }
+  @media screen and (min-width:1600px) {
+    padding: 0 20%; 
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+  .menu{
+    @media screen and (min-width:1000px) {
+      display: none; 
+     }
+  i{
+    font-size: 30px;
+    color: #646765;
+     
+  }
+}
+  img{
+    width:54px;
+  }
+  span {
+    display: none;
+    font: {
+      family: $inter;
+      weight: 600;
+      size: 22px;
+    }
+    color: $primary;
+    @media screen and (min-width:1000px) {
+      display: block;
+    }
+  }
+  ul {
+    font-family: $mulish;
+    display: none;
+    gap: 46px;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    @media screen and (min-width:1000px) {
+      display: flex;
+    }
+    a {
+      color: $primary;
+    }
+    .login {
+      // width: 200px;
+      // height: 55px;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      a {
+        background-color: $primary;
+        color: white;
+        @include button;
+        
+      }
+    }
+  }
+}
+.firstSection{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width:1000px) {
+    flex-direction: row-reverse;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 200px;
+    
+  }
+  div:first-child{
+    display: flex;
+    justify-content: center;
+    img{
+      width: 100%;
+    }
+  }
+  div:nth-child(2){
+    height: 22px;
+    background-color: $primary;
+    @media screen and (min-width:1000px) {
+      display: none;
+    }
+  }
+  div:nth-child(3){
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    @media screen and (min-width:1000px) {
+      justify-content: start;
+    }
+    .btn{
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      button:nth-child(2){
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        background-color: black;
+        justify-content: center;
+        }
+      button:first-child{
+        box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        background-color: $primary;
+      }
+      button{
+        @include mobileButton;
+        color: white;
+        font-family: $mulish;
+font-size: 14px;
+font-weight: 600;
+letter-spacing: -0.14px;
+@media screen and (min-width:1000px) {
+  width: 200px;
+  height: 55px;
+}
+
+
+
+      }
+      img{
+        width: 20px;
+      }
+    }
+    h1{
+      color: $primary;
+text-align: center;
+font-family: $inter;
+font-size: 36px;
+font-weight: 700;
+line-height: 110.023%;
+padding-top: 29px;
+@media screen and (min-width:1000px) {
+  text-align: left;
+  font-size: 66px;
+  width: 565px;
+}
+    }
+    p{
+      color: rgba(0, 0, 0, 0.80);
+text-align: center;
+font-family: $mulish;
+font-size: 12px;
+line-height: 140%; 
+letter-spacing: -0.12px;
+text-transform: capitalize;
+margin-top: 29px;
+margin-bottom: 44px;
+@media screen and (min-width:1000px) {
+  text-align: left;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.40);
+  line-height: 160%;
+  width: 490px;
+
+
+}
+
+    }
+  }
+}
